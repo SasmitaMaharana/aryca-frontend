@@ -6,6 +6,16 @@ import { useSession } from "next-auth/react";
 
 export default function Header() {
 
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   const router = useRouter();
   const { pathname } = router;
 
@@ -93,8 +103,11 @@ export default function Header() {
           </Link>
         </div>
 
+        <div className="md:hidden">
+        {/* Responsive Menu Button */}
         <button
           className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+          onClick={toggleMenu}
         >
           <span className="sr-only">Toggle menu</span>
           <svg
@@ -108,6 +121,40 @@ export default function Header() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+
+        {/* Responsive Dropdown Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-16 right-4 bg-white border border-primary border-opacity-30 z-50 p-4 rounded shadow-md">
+            <ul className="flex flex-col gap-2">
+              <li>
+                <Link className="text-gray-600 hover:text-primary" href="/" onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link className="text-gray-600 hover:text-primary" href="/products" onClick={closeMenu}>
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link className="text-gray-600 hover:text-primary" href="/about" onClick={closeMenu}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link className="text-gray-600 hover:text-primary" href="/contact" onClick={closeMenu}>
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link className="text-gray-600 hover:text-primary" href="/upcomings" onClick={closeMenu}>
+                  Upcomings
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
       </div>
     </div>
   </div>

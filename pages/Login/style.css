@@ -198,8 +198,30 @@ body {
   background-color: #23272A;
   overflow: auto;
 }
+.dropdown-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
+.dropdown-button:hover, .dropdown-button:focus {
+  background-color: #3e8e41;
+}
 
+.dropdown-danger-toggle {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-danger-toggle:hover, .dropdown-danger-toggle:focus {
+  background-color: #c82333;
+}
 
 main {
   position: relative;
