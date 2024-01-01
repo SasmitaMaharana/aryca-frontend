@@ -1,29 +1,90 @@
 {
+
+  "browser": {
+
+    "fs": false,
+
+    "path": false,
+
+    "os": false
+
+  },
+
   "name": "aryca-frontend",
+
   "version": "0.1.0",
+
   "private": true,
+
   "scripts": {
+
     "dev": "next dev",
+
     "build": "next build",
+
     "start": "next start",
+
     "lint": "next lint"
+
   },
+
   "dependencies": {
+
+    "@emailjs/browser": "^3.11.0",
+
     "axios": "^1.6.3",
+
+    "babel-preset-env": "^1.7.0",
+
+    "express": "^4.18.2",
+
+    "gsap": "^3.12.4",
+
+    "imagesloaded": "^5.0.0",
+
     "mongoose": "^8.0.3",
+
     "next": "14.0.4",
+
     "next-auth": "^4.24.5",
+
     "react": "^18",
+
+    "react-bootstrap": "^2.9.2",
+
     "react-dom": "^18",
+
     "react-hot-toast": "^2.4.1",
+
+    "react-icons": "^4.12.0",
+
     "react-spinners": "^0.13.8",
-    "stripe": "^14.10.0"
+
+    "stripe": "^14.10.0",
+
+    "styled-components": "^6.1.6",
+
+    "three": "^0.160.0"
+
   },
+
   "devDependencies": {
+
     "autoprefixer": "^10.0.1",
+
     "eslint": "^8",
+
     "eslint-config-next": "14.0.4",
+
+    "html-loader": "^4.2.0",
+
+    "node-polyfill-webpack-plugin": "^3.0.0",
+
     "postcss": "^8",
+
     "tailwindcss": "^3.3.0"
+
   }
+
 }
+

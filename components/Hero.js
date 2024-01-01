@@ -2,6 +2,7 @@ import Link from "next/link"
 import { CartContext } from "@/lib/CartContext";
 import { useContext } from "react";
 import toast from "react-hot-toast";
+import DisplacementSlider from "@/pages/Login/index";
 export default function Hero({product}){
 
   const { addProduct } = useContext(CartContext);
@@ -12,6 +13,7 @@ export default function Hero({product}){
   }
     if(product){
         return <>
+        <DisplacementSlider />
         <div className="relative overflow-hidden my-14 md:my-10">
             <div className="lg:py-40 min-h-[650px]">
                 <div className="relative mx-auto sm:static px-6 lg:px-8">

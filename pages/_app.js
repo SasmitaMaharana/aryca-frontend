@@ -5,6 +5,10 @@ import { CartContextProvider } from '../lib/CartContext';
 import { SessionProvider } from "next-auth/react"
 import { Toaster } from 'react-hot-toast';
 
+
+import '@/pages/Login/style.css';
+
+
 const inter = Poppins({
   subsets: ['latin'],
   weight: '500'

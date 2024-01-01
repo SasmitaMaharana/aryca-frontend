@@ -19,7 +19,7 @@ export default function Header() {
   
   <header className="bg-white border-b border-primary border-opacity-30 sticky top-0 z-40">
   <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-8 px-4 sm:px-6 lg:px-8 text-lg ">
-    <Link className=" text-primary flex items-center gap-1" href="/">
+    <Link href = "Login/" className=" text-primary flex items-center gap-1" >
       <span className="sr-only">Home</span>
       <img  src= "/logo/logo.png" alt="Red Car" width="60" height="80" fill = "none" stroke-width="1.5" stroke="currentColor" data-slot="icon" viewBox = "0 0 24 24" />
     / My Shop
@@ -41,7 +41,7 @@ export default function Header() {
           </li>
 
           <li>
-            <Link className={pathname === '/contact' ? active: inactive} href="/contact"> Contact Us </Link>
+            <Link className={pathname === '/contact' ? active: inactive} href="/Contact"> Contact Us </Link>
           </li>
 
           <li>
@@ -55,16 +55,19 @@ export default function Header() {
         {session ? (
               <div className="sm:flex sm:gap-2 border-r border-primary pr-4">
                 <div class="h-9 w-9">
+                  <Link href="/settings">
+                  
                   <img class="h-full w-full rounded-full object-cover object-center" src={session.user.image} alt={session.user.email} />
+                  </Link>
                 </div>
               </div>
             ) : (
               <div className="sm:flex sm:gap-2 border-r border-primary pr-4">
                 <Link
-                  className=" text-md font-medium text-text hidden md:flex"
-                  href="/"
+                  className=" text-md font-medium hover:text-teal-600/75 text-text hidden md:flex"
+                  href="/Login"
                 >
-                  Account
+                  Sign In
                 </Link>
                 <Link
                   className=" text-md font-medium text-text hidden max-md:flex md:hidden"
@@ -109,6 +112,7 @@ export default function Header() {
     </div>
   </div>
 </header>
+
 
   </>
 }
